@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-frontend-config
+  labels:
+    app: {{ .Release.Name }}-frontend
+data:
+  REACT_APP_BASE_APP_URI: {{ .Values.config.baseUri | quote }}
+  PORT: {{ .Values.config.port | quote }}
+

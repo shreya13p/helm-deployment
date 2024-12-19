@@ -1,0 +1,15 @@
+replicaCount: 1
+
+image:
+  repository: mongo
+  tag: latest
+
+credentials:
+  username: adminuser
+  password: password123
+
+storage:
+  capacity: 1Gi
+  request: 1Gi
+  hostPath: /data/mongo
+
